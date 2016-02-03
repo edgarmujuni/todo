@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Todos</title>
+</head>
+<body ng-controller="TodoCtrl">
+	<div ng-repeat="todo in todos">
+		<h4> {{todo.name}}</h4>
+		<button ng-click="removeTask(todo._id)">X</button>
+	</div>
+	<div>
+		<input type="text" ng-model="item">
+		<button ng-click="addTask(item)">Add</button>
+	</div>
+	<script src="vendor/angular.min.js"></script>
+	<script src="vendor/angular-route.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
